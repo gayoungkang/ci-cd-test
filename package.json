@@ -1,0 +1,28 @@
+{
+  "name": "my-org",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "peerDependencies": {
+    "react": ">=19",
+    "react-dom": ">=19",
+    "styled-components": ">=6"
+  },
+  "scripts": {
+    "build": "yarn workspaces foreach -pt run build",
+    "dev:web": "yarn workspace apps/web dev",
+    "storybook": "yarn workspace apps/storybook storybook",
+    "build:storybook": "yarn workspace apps/storybook build",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "yarn build && changeset publish",
+    "pre:enter": "changeset pre enter next",
+    "pre:exit": "changeset pre exit",
+    "release:canary": "yarn pre:enter && yarn version-packages && yarn release && yarn pre:exit"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.7"
+  }
+}
