@@ -1,1 +1,46 @@
+# --- Node / Yarn ---
+node_modules/
+yarn-debug.log*
+yarn-error.log*
+npm-debug.log*
+pnpm-debug.log*
+package-lock.json    
+pnpm-lock.yaml
+
+# --- Env / Secrets ---
+.env
+.env.*.local
+.env.local
+*.local
+
+
+# --- Build / Cache ---
+dist/
+build/
+coverage/
+.nyc_output/
+*.tsbuildinfo
+
+# Vite
+.vite/
+node_modules/.vite/
+
+# Storybook
+storybook-static/
+node_modules/.cache/storybook/
+
+# --- Editors / OS ---
 .DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json   # 팀 권장 확장 유지 시
+!.vscode/settings.json     # (선택) 팀 공통 설정 유지 시
+
+# --- Yarn Berry 전환 시에만(지금 v1이면 주석 유지) ---
+# .pnp.*
+# .yarn/*
+# !.yarn/releases
+# !.yarn/plugins
+# !.yarn/sdks
+# !.yarn/versions
