@@ -1,21 +1,25 @@
 {
   "name": "storybook",
   "version": "1.0.0",
+  "private": true,
   "main": "index.js",
   "license": "MIT",
-  "devDependencies": {
-    "@storybook/addon-essentials": "^8.6.14",
-    "@storybook/addon-interactions": "^8.6.14",
-    "@storybook/blocks": "^8.6.14",
-    "@storybook/react": "^9.1.10",
-    "@storybook/react-vite": "^9.1.10",
-    "@storybook/test": "^8.6.14",
-    "typescript": "^5.9.3",
-    "vite": "^7.1.9"
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build": "storybook build"
   },
   "dependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "styled-components": "^6.1.19"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "8.6.14",
+    "@storybook/addon-interactions": "8.6.14",
+    "@storybook/react-vite": "8.6.14",
+    "@storybook/test": "8.6.14",
+    "storybook": "8.6.14",
+    "typescript": "^5",
+    "vite": "^5"
   }
 }

@@ -10,11 +10,12 @@
     "react-dom": ">=19",
     "styled-components": ">=6"
   },
+  
   "scripts": {
     "build": "yarn workspaces foreach -pt run build",
     "dev:web": "yarn workspace apps/web dev",
-    "storybook": "yarn workspace apps/storybook storybook",
-    "build:storybook": "yarn workspace apps/storybook build",
+  "storybook": "yarn workspace storybook storybook",
+  "build:storybook": "yarn workspace storybook build",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "yarn build && changeset publish",
